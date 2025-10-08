@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="text-center my-5">
+    <h1 class="display-4 fw-bold">Welcome to the Student Management System</h1>
+    <p class="lead text-muted">Efficiently manage student records with our user-friendly platform.</p>
+    <div class="d-flex justify-content-center mt-4">
+        <a href="{% url 'student_list' %}" class="btn btn-primary btn-lg mx-2">View Students</a>
+        <a href="{% url 'add_student' %}" class="btn btn-success btn-lg mx-2">Add Student</a>
+    </div>
+</div>
+<div class="row text-center mt-5">
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">View Students</h5>
+                <p class="card-text">Check the list of all enrolled students.</p>
+                <a href="{% url 'student_list' %}" class="btn btn-primary">View Students</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">Add a Student</h5>
+                <p class="card-text">Add new students to the system quickly.</p>
+                <a href="{% url 'add_student' %}" class="btn btn-success">Add Student</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">About</h5>
+                <p class="card-text">Learn more about this system and its features.</p>
+                <a href="#" class="btn btn-info">About</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
